@@ -2,9 +2,9 @@
 
 from __future__ import absolute_import
 
-__author__ = "Frederic MOUTIN <looma@protonmail.ch>"
+__author__ = "Pyro-San <pyrosan@gmail.com>"
 __license__ = "GNU Affero General Public License http://www.gnu.org/licenses/agpl.html"
-__copyright__ = "Copyright (C) 2017 Frederic MOUTIN - Released under terms of the AGPLv3 License"
+__copyright__ = "Copyright (C) 2019 Pyro-San - Released under terms of the AGPLv3 License"
 
 import octoprint.plugin
 from octoprint.util import RepeatedTimer
@@ -38,7 +38,7 @@ class RoomTempPlugin(octoprint.plugin.StartupPlugin,
 				self.isRaspi = False
 
 			if self.isRaspi and self.displayRoomTemp:
-				self.startTimer(30.0)
+				self.startTimer(60.0)
 			
 		if self.isRaspi == False:
 			self._logger.info("This is not a Raspberry Pi - Plugin halted")
@@ -79,7 +79,7 @@ class RoomTempPlugin(octoprint.plugin.StartupPlugin,
 		self.displayRoomTemp = self._settings.get(["displayRoomTemp"])
 
 		if self.displayRoomTemp:
-			interval = 30.0
+			interval = 60.0
 			self.startTimer(interval)
 		else:
 			if self._checkTempTimer is not None:
@@ -115,12 +115,12 @@ class RoomTempPlugin(octoprint.plugin.StartupPlugin,
 
 				# version check: github repository
 				type="github_release",
-				user="looma",
+				user="pyrosan",
 				repo="OctoPrint-roomTemp",
 				current=self._plugin_version,
 
 				# update method: pip w/ dependency links
-				pip="https://github.com/looma/OctoPrint-roomTemp/archive/{target_version}.zip"
+				pip="https://github.com/Pyro-San/OctoPrint-roomTemp/archive/{target_version}.zip"
 			)
 		)
 
