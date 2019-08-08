@@ -5,12 +5,12 @@ import setuptools
 
 plugin_identifier = "roomtemp"
 plugin_package = "octoprint_%s" % plugin_identifier
-plugin_name = "OctoPrint-roomTemp"
-plugin_version = "1.0"
+plugin_name = "OctoPrint-roomTemp2"
+plugin_version = "2.0"
 plugin_description = "For OctoPi only: Displays temperature of room on navbar, with a DS18b20 sensor connected on Pin n°4 - See README.md to connect your sensor."
-plugin_author = "Frederic Moutin"
-plugin_author_email = "looma@protonmail.ch"
-plugin_url = "https://github.com/l00ma/OctoPrint-roomTemp"
+plugin_author = "Pyro-San"
+plugin_author_email = "pyrosan@gmail.com"
+plugin_url = "https://github.com/Pyro-San/OctoPrint-roomTemp"
 plugin_license = "AGPLv3"
 plugin_additional_data = []
 
